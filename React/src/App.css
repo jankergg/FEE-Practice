@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+.list {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: left;
+}
+.list-item {
+  padding: 10px;
+  font-size: 14px;
+  color: lightslategray;
+}
+
+.list-item:hover {
+  background-color: cadetblue;
+  color: lightgreen;
+}
