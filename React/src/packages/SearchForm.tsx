@@ -15,7 +15,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
   disabled,
 }) => {
   return (
-    <form onSubmit={onSearchSubmit}>
+    <form onSubmit={onSearchSubmit} className="search-form">
       <InputWithLabel
         id='search_input'
         type='text'
@@ -24,7 +24,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
         autoFocus
         onInput={onSearchInput}
       />
-      <button type='submit' disabled={disabled}>
+      <button type='submit' disabled={disabled} className="search-btn">
         Submit
       </button>
     </form>

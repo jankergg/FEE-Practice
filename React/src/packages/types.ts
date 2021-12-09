@@ -18,5 +18,10 @@ export type DataItem = {
 
 export type StateTypes = {
   data: DataItem[];
+  page: number;
   error: boolean;
+  sortType: string;
+  loading: boolean;
+  totalPage: number;
+  finished: boolean;
 };

@@ -8,7 +8,7 @@ interface InputWithLabelProps extends InputHTMLAttributes<HTMLInputElement> {
 const InputWithLabel: React.FC<InputWithLabelProps> = ({ id, type, label, ...rest }) => {
   return (
     <label htmlFor={id}>
-      <input type={type} name={id} {...rest} />
+      <input type={type} name={id} {...rest} className="search-input" />
     </label>
   );
 };
