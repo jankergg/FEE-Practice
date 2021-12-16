@@ -1,18 +1,11 @@
 #include <iostream>
 #include <vector>
 
-void swap(int &a, int &b)
-{
-	int temp = a;
-	a = b;
-	b = temp;
-}
-
 void reverse_array(std::vector<int> &arr, int start, int end)
 {
 	while (start < end)
 	{
-		swap(arr[start], arr[end]);
+		std::swap(arr[start], arr[end]);
 		++start;
 		--end;
 	}
