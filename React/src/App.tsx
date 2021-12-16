@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 import Wait from "@/components/Waiting";
 import { myRoutes } from "./routes";
 
@@ -20,14 +21,16 @@ const Category = () => {
 
 function App() {
   return (
-    <div className='App'>
-      <Routes>
-        <Route path='/' element={<Category />} />
-        {myRoutes.map(({ element, ...props }) => (
-          <Route key={props.name} element={<Wait for={element} />} {...props} />
-        ))}
-      </Routes>
-    </div>
+    <RecoilRoot>
+      <div className='App'>
+        <Routes>
+          <Route path='/' element={<Category />} />
+          {myRoutes.map(({ element, ...props }) => (
+            <Route key={props.name} element={<Wait for={element} />} {...props} />
+          ))}
+        </Routes>
+      </div>
+    </RecoilRoot>
   );
 }
 

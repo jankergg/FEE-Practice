@@ -11,6 +11,16 @@ export const myRoutes = [
     path: "/tictoctoe",
     element: React.lazy(() => import("@/pages/TicTocToe")),
   },
+  {
+    name: "RecoilPage",
+    path: "/recoil",
+    element: React.lazy(() => import("@/pages/RecoilExperimental")),
+  },
+  {
+    name: "Todolist",
+    path: "/todo",
+    element: React.lazy(() => import("@/pages/TodoList")),
+  },
 ];
 
 export function registerRoute() {}

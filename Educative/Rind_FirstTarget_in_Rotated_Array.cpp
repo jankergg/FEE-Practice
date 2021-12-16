@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "assertion.h"
+#include "utils/assertion.h"
 
 int binary_search_rotated(std::vector<int> &arr, int key)
 {
