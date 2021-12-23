@@ -21,6 +21,11 @@ export const myRoutes = [
     path: "/todo",
     element: React.lazy(() => import("@/pages/TodoList")),
   },
+  {
+    name: "rxjs",
+    path: "/rxjs",
+    element: React.lazy(() => import("@/pages/RxJs")),
+  },
 ];
 
 export function registerRoute() {}

@@ -8,7 +8,7 @@ int binary_search_rotated(std::vector<int> &arr, int key)
 	int mid = left + (right - left) / 2;
 	while (left <= right)
 	{
-		if (key == arr[mid] && arr[mid - 1] != arr[mid])
+    if (key == arr[mid] && arr[mid - 1] != arr[mid])
 		{
 			return mid;
 		}
