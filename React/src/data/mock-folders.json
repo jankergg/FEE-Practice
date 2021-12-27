@@ -1,0 +1,50 @@
+[
+    {
+        "name": "README.md",
+        "type": "file"
+    },
+    {
+        "name": "Demo",
+        "type": "folder",
+        "children": [
+            {
+                "name": "index.tsx",
+                "type": "file"
+            },
+            {
+                "name": "src",
+                "type": "folder",
+                "children": [
+                    {
+                        "name": "components",
+                        "type": "folder",
+                        "children": [
+                            {
+                                "name": "Card.tsx",
+                                "type": "file"
+                            },
+                            {
+                                "name": "List.tsx",
+                                "type": "file"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "pages",
+                        "type": "folder",
+                        "children": [
+                            {
+                                "name": "home.tsx",
+                                "type": "file"
+                            },
+                            {
+                                "name": "about.tsx",
+                                "type": "file"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

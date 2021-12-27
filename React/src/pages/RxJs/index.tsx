@@ -1,7 +1,9 @@
 import React from "react";
-import { Observable, from, map, filter, interval, takeUntil, take } from "rxjs";
+import { Observable, from, map, filter, interval, takeUntil, take, of } from "rxjs";
 import { useObservable } from "rxjs-hooks";
 import "@/styles/page.css";
+
+const OB = new Observable<number>();
 
 const wrapArrayIntoObservable = (arr: number[]) => {
   return new Observable<number>((sub) => {
@@ -13,6 +15,7 @@ const wrapArrayIntoObservable = (arr: number[]) => {
 
 const obs = wrapArrayIntoObservable([1, 2, 3, 4, 5]);
 const ob2 = from([1, 2, 3, 4, 5]);
+const ob3 = of([1, 2, 3, 4]);
 
 const RxJsPage = () => {
   const value = useObservable(() =>

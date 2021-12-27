@@ -26,6 +26,11 @@ export const myRoutes = [
     path: "/rxjs",
     element: React.lazy(() => import("@/pages/RxJs")),
   },
+  {
+    name: "tree",
+    path: "/tree",
+    element: React.lazy(() => import("@/pages/Tree")),
+  },
 ];
 
 export function registerRoute() {}

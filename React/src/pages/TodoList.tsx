@@ -7,6 +7,7 @@ type TodoItemProp = {
   checked?: boolean;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
+
 const TodoItem: React.FC<TodoItemProp> = React.memo(
   ({ id, title, onChange, checked }) => {
     return (
