@@ -3,6 +3,9 @@
 #include <vector>
 
 using namespace std;
+/**
+ * @brief  time complexity: O(N*2^N)
+ */
 class SubsetWithDuplicates
 {
 public:
@@ -10,17 +13,26 @@ public:
 	{
 		sort(nums.begin(), nums.end());
 		vector<vector<int>> subsets;
+		subsets.push_back(vector<int>());
 
 		int start = 0, end = 0;
-		for(int i=0; i<nums.size(); i++){
+		for (int i = 0; i < nums.size(); i++)
+		{
 			start = 0;
 			// if there is a duplicate, we only need to add new element based on the previous arrays
-			if(i>0 && nums[i] == nums[i-1]) {
+			if (i > 0 && nums[i] == nums[i - 1])
+			{
 				// start from last ending, notice that we haven't update the `end`, so
 				start = end + 1;
 			}
 			// by default, the length should be the entire array
-			end = nums.size() - 1;
+			end = subsets.size() - 1;
+			for (int j = start; j <= end; j++)
+			{
+				vector<int> tmp(subsets[j]);
+				tmp.push_back(nums[i]);
+				subsets.push_back(tmp);
+			}
 		}
 
 		return subsets;
