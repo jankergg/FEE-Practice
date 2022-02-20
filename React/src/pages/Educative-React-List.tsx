@@ -117,7 +117,7 @@ function App() {
         onSearchInput={handleSearchInput}
         onSearchSubmit={handleSubmit}
         disabled={state.loading || !searchTerm}
-      />
+        />
       <SearchHistory SearchTerms={searchHistory} onClick={onClickHistory} />
       <SortingBar onSort={handleSort} sortType={state.sortType} />
       {state.data?.length > 0 ? <List data={state.data} /> : state.loading ? "loading..." : null}
@@ -126,3 +126,4 @@ function App() {
 }
 
 export default React.memo(App);
+
